@@ -1077,3 +1077,173 @@ body {
     background-color: #FF7882;
     color: white;
 }
+ /* MOBILE FIX: make everything scale on small screens */
+body, html {
+    max-width: 100%;
+    overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* removes extra space below images */
+}
+
+/* Flexible containers */
+.container, .wrapper {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Stack columns on mobile */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column !important;
+    }
+    .column {
+        width: 100% !important;
+        margin-bottom: 20px; /* spacing between stacked elements */
+    }
+    
+    /* Text scaling */
+    h1 { font-size: 6vw; }
+    h2 { font-size: 5vw; }
+    p  { font-size: 4vw; }
+}
+
+/* Fix clickable elements on small screens */
+button, a {
+    touch-action: manipulation;
+}
+/* Force images to be visible and responsive on mobile */
+img {
+    display: block !important; /* removes extra gaps */
+    max-width: 100% !important; /* fits screen */
+    height: auto !important;
+    visibility: visible !important; /* ensure mobile browsers render it */
+}
+/* Wrapper should not overflow */
+#wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Make the flag container flexible */
+.flag__birthday {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* allows stacking on small screens */
+    gap: 10px; /* space between flags */
+}
+
+/* Make images responsive */
+.flag__birthday img {
+    max-width: 100%; /* scale down on mobile */
+    width: auto;      /* let browser decide width */
+    height: auto;     /* maintain aspect ratio */
+    display: block;
+}
+/* ===== MOBILE SCALING FIX ===== */
+@media screen and (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
+    }
+
+    #wrapper {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .flag__birthday {
+        flex-wrap: wrap;
+        justify-content: center;
+        transform: translateY(-50px) !important;
+    }
+
+    .flag__birthday img {
+        max-width: 45%;
+        height: auto;
+        margin: 5px;
+    }
+
+    .content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .content .left, .content .right {
+        width: 100% !important;
+    }
+
+    .title {
+        font-size: 6vw !important;
+        letter-spacing: 3px !important;
+    }
+
+    .title .hat {
+        top: -40px !important;
+        right: 10px !important;
+        width: 80px;
+    }
+
+    .right .box__account {
+        transform: translateY(0px) !important;
+        width: 90% !important;
+        max-width: 300px !important;
+    }
+
+    .right .box__account .image {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .cricle {
+        right: 10px !important;
+        top: 10px !important;
+    }
+
+    .smiley__icon {
+        left: 50% !important;
+        bottom: 50px !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .decorate_star, .decorate_flower--one,
+    .decorate_flower--two, .decorate_flower--three,
+    .decorate_bottom {
+        display: none; /* Optional: hide small decorations on mobile */
+    }
+
+    .balloon_one img,
+    .balloon_two img {
+        width: 60px !important;
+        height: auto !important;
+    }
+
+    .boxMail .boxMail-container {
+        width: 95% !important;
+        height: auto !important;
+        flex-direction: column !important;
+    }
+
+    .boxMail .boxMail-container .card1,
+    .boxMail .boxMail-container .card2 {
+        width: 100% !important;
+        position: relative !important;
+        transform: none !important;
+    }
+
+    .boxMail .boxMail-container .card2 .card2-content {
+        width: 100% !important;
+        height: auto !important;
+        padding: 10px !important;
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
