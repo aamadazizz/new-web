@@ -1247,3 +1247,29 @@ img {
         height: auto !important;
     }
 }
+/* Force images to show properly on all devices */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.flag__birthday img {
+    width: auto;
+    max-width: 350px;
+}
+.content .right .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.right .balloon_one img,
+.right .balloon_two img,
+.decorate_flower--one img,
+.decorate_flower--two img,
+.decorate_flower--three img,
+.decorate_bottom img,
+.smiley__icon img {
+    width: auto;
+    max-width: 100px;
+    height: auto;
+}
